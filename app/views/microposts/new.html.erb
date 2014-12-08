@@ -1,0 +1,11 @@
+<h1>New Micropost</h1>
+<%=form_for @micropost do |f|%>
+	<%=f.label :content%>
+	<%=f.text_area :content%>
+	<br>
+	User Id<%=f.select :user_id, options_for_select(User.pluck(:id)), prompt: "-Select Id-"%>
+	<br>
+	<%=f.submit "Create "%>
+<%end%>
+<br>
+<%=link_to "BACK", :back%>

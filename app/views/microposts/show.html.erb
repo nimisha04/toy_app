@@ -1,0 +1,9 @@
+Micropost was successfully created...
+<br>
+Content: <%=@micropost.content%>
+<br>
+Id: <%=@micropost.user_id%>
+<br>
+<%=link_to "Edit", edit_micropost_path(@micropost)%>  |
+<%=link_to "All Microposts", microposts_path%>  |
+<%=link_to "Back", :back%>

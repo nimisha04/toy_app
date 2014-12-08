@@ -1,0 +1,9 @@
+User was successfully created...
+<br>
+Name: <%=@user.name%>
+<br>
+Email: <%=@user.email%>
+<br>
+<%=link_to "Edit", edit_user_path(@user)%>  |
+<%=link_to "All User", users_path%>  |
+<%=link_to "Back", :back%>
