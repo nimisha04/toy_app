@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   root 'users#index'
   resources :microposts
   resources :users
+  get 'static_pages/home'
+  get 'static_pages/help'
 
   # Example resource route with options:
   #   resources :products do
