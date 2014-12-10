@@ -13,14 +13,14 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   
-  root 'users#index'
+  root 'static_pages#sampleapp'
   resources :microposts
   resources :users
   get 'static_pages/home'
   get 'static_pages/help'
-  get 'static_pages/about'
-  get 'static_pages/sampleapp'
+  get 'static_pages/about' 
   get 'static_pages/contact'
+  get 'signup'  => 'users#new'
 
 
   # Example resource route with options:
