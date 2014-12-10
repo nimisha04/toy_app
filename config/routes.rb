@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'static_pages/help'
   get 'static_pages/about'
   get 'static_pages/sampleapp'
+  get 'static_pages/contact'
+
 
   # Example resource route with options:
   #   resources :products do
