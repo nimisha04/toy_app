@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require_tree .
 window.setTimeout(function() {
     $(".alert").fadeTo(1000, 0).slideUp(900, function(){
