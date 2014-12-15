@@ -1,22 +1,12 @@
-<% provide(:title, "Home Page") %>
-<h1> LISTING USERS</h1>
-<table>
-	<tr>
-		<th>NAME</th>
-		<th>EMAIL</th>
-	</tr>
-	<%@users.each do |user|%>
-		<tr>
-			<td><%=user.name%></td>
-			<td><%=user.email%></td> 
-			<td><%=link_to "edit", edit_user_path(user.id)%>  |
-			<td><%=link_to "delete", user_path(user.id), method: :DELETE, data: {confirm:"Are you sure you want to DELETE it???"}%>
-		</tr>
-	<%end%>	
-	<br>
-</table>
-<br>
-<%=link_to "NEW USER", new_user_path%>
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+<%= will_paginate %>
+
+<ul class="users">
+    <%=render @users%>  
+</ul>
+<%= will_paginate %>
+
 <br>
 <%=link_to "Create Micropost", new_micropost_path%>
 <br>
