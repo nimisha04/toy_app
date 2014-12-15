@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   root 'static_pages#sampleapp'
   resources :microposts
   resources :users
+  resources :account_activations, only: [:edit]
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about' 
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  
 
 
   # Example resource route with options:
