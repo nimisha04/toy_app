@@ -55,6 +55,7 @@ class PasswordResetsController < ApplicationController
     def valid_user
       unless (@user && @user.activated? &&
               @user.authenticated?(:reset, params[:id]))
+        falsh[:info]= "please activate your account...."
         redirect_to root_url
       end
     end
